@@ -53,7 +53,7 @@ gem "bootsnap", require: false
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'annotate'
-
+  gem 'devise'
 
 
 group :development, :test do
