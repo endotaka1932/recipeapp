@@ -1,0 +1,24 @@
+.container
+  .wrap
+    .login_upper
+      .image
+        = image_tag 'login_image.png'
+      .title
+        %h2='MyRecipe'
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      = render "devise/shared/error_messages", resource: resource
+      .login_form
+        .field
+          = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'メールアドレス'
+        .field
+          = f.password_field :password, autocomplete: "current-password", placeholder: 'パスワード'
+        -# - if devise_mapping.rememberable?
+        -#   .field
+        -#     = f.check_box :remember_me
+        -#     = f.label :remember_me
+      .actions
+        = f.submit "ログイン"
+      .devise_link
+        = render "devise/shared/links"
+
+

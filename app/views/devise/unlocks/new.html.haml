@@ -1,0 +1,16 @@
+.container
+  .wrap
+    .login_upper
+      .image
+        = image_tag 'login_image.png'
+      .title
+        %h2='MyRecipe'
+    = form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f|
+      = render "devise/shared/error_messages", resource: resource
+      .login_form
+        .field
+          = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'メールアドレス'
+      .actions
+        = f.submit "ロックの解除"
+      .devise_link
+        = render "devise/shared/links"
