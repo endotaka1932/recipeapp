@@ -1,3 +1,5 @@
+@import '_variable';
+
 @mixin input {
     height: 55px;
     width: 300px;
@@ -35,7 +37,7 @@
                 padding-left: 0;
                 width: 306px;
                 border-radius: 10px;
-                background-color: #F77C42;
+                background-color: $main-color;
                 font-size: 1.1em;
                 color: #fff;
                 border: none;

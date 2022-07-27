@@ -12,12 +12,21 @@
 
   
   %body
-    %header
-      .header
-        .header_left
-          -# = link_to :back do
+    .header
+      .header_left
+        = link_to :back do
           %i.fa-solid.fa-arrow-rotate-left
-        .title
-          %h2 My Recipe
-        .header_right
+      .title
+        %h2 My Recipe
+      .header_right
+        .openbtn
+          %span
+          %span
+          %span
+        %nav#g-nav
+          %ul
+            %li
+              -# = link_to 'ログアウト', destroy_user_session_path, data: { method: 'delete' }
+            %li
+              -# = link_to 'お問い合わせ', new_contact_path
     = yield
